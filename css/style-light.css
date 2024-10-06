@@ -1,0 +1,234 @@
+body{
+   background: linear-gradient(60deg, #000000 0%, #ffffff 100%);
+   cursor: cell;
+}
+#iframeforgames{
+  background: linear-gradient(60deg, #000000 0%, #ffffff 100%);
+  cursor: cell;
+}
+
+.gameframe{
+   height: 112px;
+  width: 112px;
+  border-radius: 15px;
+  cursor: cell;
+  text-decoration: none;
+}
+.gameframe img{
+  height: 112px;
+  width: 112px;
+  border-color: #D0D0D0;
+  border-radius: 15px;
+  transition: transform 0.35s;
+  loading: lazy;
+}
+.gameframe img:hover{
+  transform: scale(0.925);
+}
+.gameframetext{
+  display: none;
+  clear: both;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  margin:0;
+  top:50%;
+  transform:translateY(-50%);
+}
+  
+  .gameframetext:hover {
+  display: block;
+  opacity: 1;
+}
+.topbar-navigation {
+  background: #D0D0D0;
+  background: linear-gradient(90deg, #000000 0%, #999999, 100%);
+  overflow: hidden;
+  border-radius: 20px;
+  position: sticky;
+  cursor: cell;
+
+}
+.topbar-navigation a{
+  cursor: cell;
+  color: #999999;
+  background-color: #D0D0D0;
+  float: left;
+  display: flex;
+  height: 3em;
+  width: 8em;
+  font-size: 16px;
+  border-radius: 20px;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.topbar-navigation a{transition-duration: 0.2s}
+.topbar-navigation a:hover{
+  cursor: cell;
+  color: #D0D0D0;
+  background-color: #999999;
+  float: left;
+  display: flex;
+  height: 3em;
+  width: 8em;
+  font-size: 16.5px;
+  border-radius: 20px;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.topbar-navigation a.current-page{
+  cursor: cell;
+  color: #999999;
+  background-color: #D0D0D0;
+  float: left;
+  display: flex;
+  height: 3em;
+  width: 8em;
+  font-size: 16px;
+  border-radius: 20px;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.topbar-navigation a.current-page{transition-duration: 0.2s}
+.topbar-navigation a.current-page:hover{
+  cursor: cell;
+  color: #999999;
+  background-color: #D0D0D0;
+  float: left;
+  display: flex;
+  height: 3em;
+  width: 8em;
+  font-size: 16.5px;
+  border-radius: 20px;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+button{
+  float: none;
+  color: #D0D0D0;
+  background-color: #999999;
+  align-items: center;
+  justify-content: center;
+  margin: 4px 2px;
+  font-weight: 400;
+  cursor: cell;
+  height: 3em;
+  width: 8em;
+  display: flex;
+  transition-duration: .25s;
+   text-decoration: none;
+}
+button:hover{
+  float: none;
+  color: #999999;
+  background-color: #D0D0D0;
+  align-items: center;
+  justify-content: center;
+  margin: 4px 2px;
+  font-weight: 400;
+  cursor: cell;
+  height: 3.1em;
+  width: 8.2em;
+  display: flex;
+   text-decoration: none;
+
+}
+.button{
+  float: none;
+  color: #D0D0D0;
+  background-color: #999999;
+  align-items: center;
+  justify-content: center;
+  margin: 4px 2px;
+  font-weight: 400;
+  cursor: cell;
+  height: 3em;
+  width: 8em;
+  display: flex;
+  transition-duration: .25s;
+   text-decoration: none;
+}
+.button:hover{
+  float: none;
+  color: #999999;
+  background-color: #D0D0D0;
+  align-items: center;
+  justify-content: center;
+  margin: 4px 2px;
+  font-weight: 400;
+  cursor: cell;
+  height: 3.1em;
+  width: 8.2em;
+  display: flex;
+text-decoration: none;
+}
+  h1 {
+  font-family: monospace;
+  color: #000000;
+  font-size: 28px;
+}
+p {
+  font-family: monospace;
+  color: #000000;
+  font-size: 18px;
+}
+h2 {
+  font-family: monospace;
+  color: #000000;
+  font-size: 34px;
+}
+h3 {
+  font-family: monospace;
+  color: #000000;
+  font-size: 130px;
+}
+#modebutton{
+      position: fixed;
+      top: 10px;
+      right: 10px;
+       z-index: 99;
+    }
+#leftFloatAd{
+  position: fixed;
+      top: 75px;
+      left: 15px;
+      width: 120px;
+      height: 610px;
+      cursor: cell;
+}
+#rightFloatAd{
+  position: fixed;
+      top: 75px;
+      right: 15px;
+      width: 120px;
+      height: 610px;
+      cursor: cell;
+}
+#leftFloatAdWide{
+  position: fixed;
+      top: 75px;
+      left: 15px;
+      width: 240px;
+      height: 610px;
+      cursor: cell;
+}
+#rightFloatAdWide{
+  position: fixed;
+      top: 75px;
+      right: 15px;
+      width: 240px;
+      height: 610px;
+      cursor: cell;
+}

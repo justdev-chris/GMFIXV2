@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="apple-touch-icon" sizes="128x128" href="img/shellshockers-icon.ico">
+  <link rel="icon" type="image/x-icon" href="img/shellshockers-icon.ico">
+<script src="js/style.js">styleload();</script>
+<link id="style" rel="stylesheet" href="">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shell Shockers 🍳 Multiplayer io game</title>
+   <!-- DO NOT REMOVE -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4TWKZ1VDE6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4TWKZ1VDE6');
+</script>
+<!--/DO NOT REMOVE/-->
+</head>
+<body>
+<style>
+#container {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  background-color: #00000;
+  height: 1em;
+  width: 4em;
+}
+
+.link .tip {
+  visibility: hidden;
+  width: 0;
+  height: 100px;
+  opacity: 0;
+  background-color: #008CBA;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 100%;
+  transition: 0.5s ease;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.link:hover .tip {
+  visibility: visible;
+  width: 250px;
+  height: auto;
+  opacity: 1;
+}
+</style>
+<div id="buttons" style="
+  position:fixed;
+  top:0;  
+  width: 50%;
+  margin: auto;
+  z-index:99;
+  left:0;
+  right:0;">
+<center>
+<div id="container">
+  <div class="link">Servers;
+    <span class="tip">
+
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://algebra.best')">algebra.best</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://algebra.vip')">algebra.vip</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://biologyclass.club')">biologyclass.club</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://combateggs.com')">combateggs.com</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://deadlyegg.com')">deadlyegg.com</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://deathegg.life')">deathegg.life</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://deathegg.world')">deathegg.world</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://egg.dance')">egg.dance</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://eggboy.club')">eggboy.club</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://eggboy.me/')">eggboy.me</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://eggboy.xyz')">eggboy.xyz</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://eggbattle.com/')">eggbattle.com</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://eggcombat.com')">eggcombat.com</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://eggfacts.fun')">eggfacts.fun</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://egghead.institute')">egghead.institute</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://eggisthenewblack.com')">eggisthenewblack.com</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://eggsarecool.com')">eggsarecool.com</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://eggshock.com')">eggshock.com</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://eggshooter.best')">eggshooter.best</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://eggshooter.com')">eggshooter.com</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://eggwarfare.com')">eggwarfare.com</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://geometry.best')">geometry.best</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://geometry.monster')">geometry.monster</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://geometry.pw')">geometry.pw</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://geometry.report')">geometry.report</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://hardboiled.life')">hardboiled.life</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://hardshell.life')">hardshell.life</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://humanorganising.org')">humanorganising.org</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://mathactivity.club')">mathactivity.club</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://mathactivity.xyz/')">mathactivity.xyz</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://mathdrills.info')">mathdrills.info</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://mathdrills.life')">mathdrills.life</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://mathfun.rocks')">mathfun.rocks</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://mathgames.world')">mathgames.world</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://math.international')">math.international</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://mathlete.fun')">mathlete.fun</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://mathlete.pro')">mathlete.pro</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://overeasy.club')">overeasy.club</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://risenegg.com')">risenegg.com</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://scrambled.tech')">scrambled.tech</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://scrambled.today')">scrambled.today</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://scrambled.us')">scrambled.us</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://scrambled.world')">scrambled.world</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://shellsocks.com')">shellsocks.com</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://shellshock.io')">shellshock.io</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://shellshockers.best/')">shellshockers.best</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://shellshockers.club')">shellshockers.club</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://shellshockers.life')">shellshockers.life</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://shellshockers.site')">shellshockers.site</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://shellshockers.today')">shellshockers.today</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://shellshockers.us/')">shellshockers.us</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://shellshockers.wiki')">shellshockers.wiki</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://shellshockers.world')">shellshockers.world</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://shellshockers.xyz')">shellshockers.xyz</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://softboiled.club')">softboiled.club</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://urbanegger.com')">urbanegger.com</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://violentegg.club')">violentegg.club</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://violentegg.fun')">violentegg.fun</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://yolk.best')">yolk.best</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://yolk.life')">yolk.life</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://yolk.quest')">yolk.quest</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://yolk.rocks')">yolk.rocks</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://yolk.tech')">yolk.tech</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://yolk.today')">yolk.today</a>
+<a style="text-color: #000000; background-color: #d0d0d0" id="server" onclick="changeIframeSrc('https://zygote.cafe')">zygote.cafe</a>
+
+      </span>
+  </div>
+</div>
+</center>
+</div>
+<center>
+<iframe id="game" src="https://algebra.best" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;">
+    Your browser doesn't support iframes
+</iframe>
+
+<script>
+function changeIframeSrc(newSrc) {
+    var iframe = document.getElementById('game');
+    iframe.src = newSrc;
+    styleload();
+}
+</script>
+</center>
+
+
+</body>
+</html>

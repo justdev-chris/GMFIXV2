@@ -22,13 +22,13 @@ function launchIframe(contentURL) {
     var cloakButton = document.createElement('button');
     cloakButton.innerText = 'Cloak';
     cloakButton.style.position = 'fixed';
-    cloakButton.style.top = '50px';
+    cloakButton.style.top = '60px';
     cloakButton.style.right = '10px';
     cloakButton.style.zIndex = '1000000';
         var reloadButton = document.createElement('button');
     reloadButton.innerText = 'Reload Game';
     reloadButton.style.position = 'fixed';
-    reloadButton.style.top = '50px';
+    reloadButton.style.top = '60px';
     reloadButton.style.left = '10px';
     reloadButton.style.zIndex = '1000000';
 

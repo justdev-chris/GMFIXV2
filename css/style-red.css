@@ -1,17 +1,19 @@
 body{
-   background: linear-gradient(60deg, #000000 0%, #EE1900 100%);
+   background: linear-gradient(0deg, #000000 0%, #EE1900 550%);
    cursor: cell;
 }
 #iframeforgames{
-  background: linear-gradient(60deg, #000000 0%, #EE1900 100%);
+  background: black;
   cursor: cell;
 }
+
 .gameframe{
    height: 112px;
   width: 112px;
   border-radius: 15px;
   cursor: cell;
   text-decoration: none;
+  
 }
 .gameframe img{
   height: 112px;
@@ -20,6 +22,7 @@ body{
   border-radius: 15px;
   transition: transform 0.35s;
   loading: lazy;
+background-color: #ee1900;
 }
 .gameframe img:hover{
   transform: scale(0.925);
@@ -43,18 +46,18 @@ body{
   opacity: 1;
 }
 .topbar-navigation {
-  background: #A41515;
-  background: linear-gradient(90deg, #000000 0%, #EE1900, 100%);
+  border-bottom: 2px solid #EE1900;
+  background: black;
   overflow: hidden;
-  border-radius: 20px;
+  
   position: sticky;
   cursor: cell;
-
+  z-index: 99999;
 }
 .topbar-navigation a{
   cursor: cell;
   color: #EE1900;
-  background-color: #A41515;
+  background-color: black;
   float: left;
   display: flex;
   height: 3em;
@@ -65,11 +68,12 @@ body{
   justify-content: center;
   align-items: center;
   text-decoration: none;
+border: 2px solid #EE1900;
 }
 .topbar-navigation a{transition-duration: 0.2s}
 .topbar-navigation a:hover{
   cursor: cell;
-  color: #A41515;
+  color: #1b2f31;
   background-color: #EE1900;
   float: left;
   display: flex;
@@ -85,7 +89,7 @@ body{
 
 .topbar-navigation a.current-page{
   cursor: cell;
-  color: #A41515;
+  color: #1b2f31;
   background-color: #EE1900;
   float: left;
   display: flex;
@@ -101,7 +105,7 @@ body{
 .topbar-navigation a.current-page{transition-duration: 0.2s}
 .topbar-navigation a.current-page:hover{
   cursor: cell;
-  color: #A41515;
+  color: #1b2f31;
   background-color: #EE1900;
   float: left;
   display: flex;
@@ -115,39 +119,31 @@ body{
   text-decoration: none;
 }
 button{
-  float: none;
-  color: #EE1900;
-  background-color: #A41515;
-  align-items: center;
-  justify-content: center;
-  margin: 4px 2px;
-  font-weight: 400;
   cursor: cell;
+  color: #EE1900;
+  background-color: black;
+  float: left;
+  display: flex;
   height: 3em;
   width: 8em;
-  display: flex;
+  font-size: 16px;
+  border-radius: 20px;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+border: 2px solid #EE1900;
   transition-duration: .25s;
-   text-decoration: none;
 }
 button:hover{
-  float: none;
-  color: #A41515;
-  background-color: #EE1900;
-  align-items: center;
-  justify-content: center;
-  margin: 4px 2px;
-  font-weight: 400;
-  cursor: cell;
   height: 3.1em;
   width: 8.2em;
-  display: flex;
-   text-decoration: none;
 
 }
 .button{
-  float: none;
-  color: #A41515;
-  background-color: #EE1900;
+float: none;
+  color: #EE1900;
+  background-color: black;
   align-items: center;
   justify-content: center;
   margin: 4px 2px;
@@ -157,12 +153,13 @@ button:hover{
   width: 8em;
   display: flex;
   transition-duration: .25s;
-   text-decoration: none;
+  text-decoration: none;
+border: 2px solid #EE1900;
 }
 .button:hover{
   float: none;
-  color: #EE1900;
-  background-color: #A41515;
+  color: #1b2f31;
+  background-color: #EE1900;
   align-items: center;
   justify-content: center;
   margin: 4px 2px;
@@ -171,33 +168,33 @@ button:hover{
   height: 3.1em;
   width: 8.2em;
   display: flex;
-text-decoration: none;
+  text-decoration: none;
 }
   h1 {
   font-family: monospace;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 28px;
 }
 p {
   font-family: monospace;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 18px;
 }
 h2 {
   font-family: monospace;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 34px;
 }
 h3 {
   font-family: monospace;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 130px;
 }
 #modebutton{
       position: fixed;
       top: 10px;
       right: 10px;
-       z-index: 99;
+       z-index: 1000000;
     }
 #leftFloatAd{
   position: fixed;

@@ -1,4 +1,4 @@
-@import url("./global.css");
+@import "global.css";
 :root {
 --background-style: linear-gradient(0deg, #000000 0%, rgba(0,242,255,1) 1200%);
 --color-1: rgba(0,242,255,1);

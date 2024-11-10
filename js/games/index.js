@@ -1,5 +1,5 @@
 const originalTitle = document.querySelector('title').textContent;
-const addition = '&middot; Geometry Tryhard';
+const addition = '- Geometry Tryhard';
 
 // Check if the addition is already in the title
 if (!originalTitle.includes(addition)) {
@@ -10,6 +10,7 @@ if (!originalTitle.includes(addition)) {
   newTitle = newTitle.replace(/- ubg235 GameDistribution/, addition);
   newTitle = newTitle.replace(/- ubg235 GC/, addition);
   newTitle = newTitle.replace(/- TBG35/, addition);
+newTitle = newTitle.replace(/&middot Geometry Tryhard/, addition);
 
   // If no replacements were made, add the addition to the end
   if (newTitle === originalTitle) {

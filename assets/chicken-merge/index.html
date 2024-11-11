@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Chickens Merge Unblocked - ubg235 Poki</title>
-	<script src="/js/games/index.js"></script>
+	<title>Chicken Merge Unblocked</title>
+
 	<!-- Standardised web app manifest -->
 	<link rel="manifest" href="appmanifest.json" />
-	
+
 	<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<link rel="apple-touch-icon" sizes="256x256" href="icon-256.png" />
 	<meta name="HandheldFriendly" content="true" />
-	
+
 	<!-- Chrome for Android web app tags -->
 	<meta name="mobile-web-app-capable" content="yes" />
 	<link rel="shortcut icon" sizes="256x256" href="icon-256.png" />
-
-	<script src="patch/js/poki-sdk.js"></script>
+        
+	<script src="patch/js/poki-sdk-v2.js"></script>
     <script src="poki_sitelock.js"></script>
 
     <!-- All margins and padding must be zero for the canvas to fill the screen. -->
@@ -66,10 +66,10 @@
 	{
 		console.log("Page Loaded");
 	}
-	var pokiSDKReady = false; 
+	var pokiSDKReady = false;
 	var isGameLoaded = false;
 	var adBlockerEnabled = false;
-	
+
 	PokiSDK.init().then(
 	    () => {
 	    	pokiSDKReady = true;
@@ -78,7 +78,7 @@
 	        console.log("PokiSDK initialized");
 	        PokiSDK.gameLoadingStart();
 	        // continue to game
-	    }   
+	    }
 	).catch(
 	    () => {
 	        // initialized but the user has an adblock
@@ -97,7 +97,7 @@
 	        		c2_callFunction("onRewardedAD_Disabled");
 	        	}
 	        }
-	    }   
+	    }
 	);
 	function Update_LoadingProgress(progress)
 	{
@@ -117,13 +117,13 @@
 		isGameLoaded = true;
 		if(pokiSDKReady)
 		{
-			PokiSDK.gameLoadingFinished();	
+			PokiSDK.gameLoadingFinished();
 			if(adBlockerEnabled)
 			{
 				console.log("Disable Reawred Ads");
 				c2_callFunction("onRewardedAD_Disabled");
 			}
-	        
+
 		}
 	}
 	function onMatchStarted() {
@@ -151,12 +151,12 @@
 			.catch(
 			    () => {
 			        goToGame();
-			    }   
+			    }
 			);
 			/*
 	  		if(!adBlockerEnabled)
 	  		{
-		  		
+
 			}
 			else
 			{
@@ -169,7 +169,7 @@
 	  	{
 	  		goToGame();
 	  	}
-	    
+
 	  }
 	  function goToGame()
 	  {
@@ -212,18 +212,18 @@
 	  	{
 	  		c2_callFunction("On_RewardedAd_Closed");
 	  	}
-	  	
+
 
 	  }
 
 	</script>
-	
 
-</head> 
- 
-<body onload="onPageReady();"> 
+
+</head>
+
+<body onload="onPageReady();">
 	<div id="fb-root"></div>
-	
+
 	<script>
 	// Issue a warning if trying to preview an exported project on disk.
 	(function(){
@@ -234,10 +234,10 @@
 		}
 	})();
 	</script>
-	
+
 	<!-- The canvas must be inside a div called c2canvasdiv -->
 	<div id="c2canvasdiv">
-	
+
 		<!-- The canvas the project will render to.  If you change its ID, don't forget to change the
 		ID the runtime looks for in the jQuery events above (ready() and cr_sizeCanvas()). -->
 		<canvas id="c2canvas" width="1920" height="1080">
@@ -250,17 +250,17 @@
 			<a href="http://www.google.com/chrome/">Google Chrome</a><br/>
 			<a href="http://www.apple.com/safari/download/">Apple Safari</a></h1>
 		</canvas>
-		
+
 	</div>
-	
+
 	<!-- Pages load faster with scripts at the bottom -->
-	
+
 	<!-- Construct 2 exported games require jQuery. -->
 	<script src="jquery-2.1.1.min.js"></script>
 
 	<script src="spine_webgl.js"></script>
 
-	
+
     <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
     This file will have been minified and obfuscated if you enabled "Minify script" during export. -->
 	<script src="c2runtime.js"></script>
@@ -268,11 +268,11 @@
     <script>
 		// Start the Construct 2 project running on window load.
 		jQuery(document).ready(function ()
-		{			
+		{
 			// Create new runtime using the c2canvas
 			cr_createRuntime("c2canvas");
 		});
-		
+
 		// Pause and resume on page becoming visible/invisible
 		function onVisibilityChanged() {
 			if (document.hidden || document.mozHidden || document.webkitHidden || document.msHidden)
@@ -280,24 +280,24 @@
 			else
 				cr_setSuspended(false);
 		};
-		
+
 		document.addEventListener("visibilitychange", onVisibilityChanged, false);
 		document.addEventListener("mozvisibilitychange", onVisibilityChanged, false);
 		document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
 		document.addEventListener("msvisibilitychange", onVisibilityChanged, false);
-		
+
 		function OnRegisterSWError(e)
 		{
 			console.warn("Failed to register service worker: ", e);
 		};
-		
+
 		// Runtime calls this global method when ready to start caching (i.e. after startup).
 		// This registers the service worker which caches resources for offline support.
 		window.C2_RegisterSW = function C2_RegisterSW()
 		{
 			if (!navigator.serviceWorker)
 				return;		// no SW support, ignore call
-			
+
 			try {
 				navigator.serviceWorker.register("sw.js", { scope: "./" })
 				.then(function (reg)
@@ -312,7 +312,6 @@
 			}
 		};
     </script>
-    <script src="js/analytics_ubg_v1_4.js"></script>
-    <script src="js/ubg235_client_v1_1.js"></script>
-</body> 
-</html> 
+		<script src="js/analytics_ubg_v1_4.js"></script>
+</body>
+</html>

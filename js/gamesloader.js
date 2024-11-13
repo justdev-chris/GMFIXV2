@@ -1,5 +1,7 @@
+
 function launchIframe(contentURL) {
     localStorage.setItem('cloakurl', contentURL);
+    style.innerHTML = ``;
     var iframe = document.createElement('iframe');
     iframe.src = contentURL;
     iframe.id = 'iframeforgames';
@@ -47,6 +49,7 @@ function launchIframe(contentURL) {
         document.body.removeChild(fullscreenButton);
         document.body.removeChild(cloakButton);
         document.body.removeChild(reloadButton);
+        textRotate();
     });
 
 

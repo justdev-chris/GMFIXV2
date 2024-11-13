@@ -105,12 +105,12 @@ var games = [
   "Justfall.lol",
   "Mineclicker Re-Excavated",
   "Subway Surfers",
-  "The Papa's games collection",
+  "Papa's games",
   "Swerve",
   "Super Mario 64",
   "Angry Birds",
   "Bad Piggies",
-  "The Henry Stickmin Collection",
+  "Henry Stickmin",
   "Core Ball",
   "Dante",
   "Geometry Dash",
@@ -280,10 +280,10 @@ var games = [
   "Wallsmash",
   "xx142-b2.exe",
 ];
-says.push("Check out&nbsp" + games[Math.floor(Math.random() * games.length)] + ".");
+says.push("We have the " + games[Math.floor(Math.random() * games.length)] + " You've been looking for!");
 says.push("Also See&nbsp" + games[Math.floor(Math.random() * games.length)] + "!");
 says.push("You should play&nbsp" + games[Math.floor(Math.random() * games.length)] + "!");
-says.push("Go play some&nbsp" + games[Math.floor(Math.random() * games.length)] + ".");
+says.push("WE HAVE &nbsp" + games[Math.floor(Math.random() * games.length)] + "!!!");
 says.push("Have some fun with&nbsp" + games[Math.floor(Math.random() * games.length)]);
 says.push("Play some&nbsp" + games[Math.floor(Math.random() * games.length)] + "!");
 says.push("Check out&nbsp" + games[Math.floor(Math.random() * games.length)] + "! It's worth it!");
@@ -301,4 +301,3 @@ fetch("https://ipv6.wtfismyip.com/json")
   says.push(`<style>.splash-text{ color:#20C20E;}</style>Your IP is: ${ipAddress}`);
 });
 
-//credit to https://railin.vercel.app/ for the o.g code

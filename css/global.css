@@ -16,6 +16,9 @@ body{
   align-items: center;
   display: inline-block;
   border: 3px solid var(--color-1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .gameframe img{
   height: 216px;
@@ -177,6 +180,20 @@ border: 2px solid var(--color-1);
   color: #ffffff;
   font-size: 28px;
 }
+.rotating-text {
+  animation: rotateText 2.75s linear infinite; 
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotateText {
+  0% { transform: translateX(140%); } 
+  50% { transform: translateX(0); } 
+  100% { transform: translateX(-140%); } 
+
+}
+
+
+
 p {
   font-family: monospace;
   color: #ffffff;

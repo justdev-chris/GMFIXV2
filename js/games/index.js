@@ -1,5 +1,5 @@
 const originalTitle = document.querySelector('title').textContent;
-const addition = '- Geometry Tryhard';
+const addition = ' - ' + window.location.hostname;
 
 // Check if the addition is already in the title
 if (!originalTitle.includes(addition)) {
@@ -9,6 +9,7 @@ if (!originalTitle.includes(addition)) {
   newTitle = newTitle.replace(/\| 3kh0/, addition);
   newTitle = newTitle.replace(/- ubg235 GameDistribution/, addition);
   newTitle = newTitle.replace(/- ubg235 GC/, addition);
+  newTitle = newTitle.replace(/- ubg235 Poki/, addition);
   newTitle = newTitle.replace(/- TBG35/, addition);
 newTitle = newTitle.replace(/&middot Geometry Tryhard/, addition);
 

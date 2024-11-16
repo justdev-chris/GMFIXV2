@@ -1,5 +1,6 @@
 
 function launchIframe(contentURL) {
+
     localStorage.setItem('cloakurl', contentURL);
     style.innerHTML = ``;
     var iframe = document.createElement('iframe');
@@ -12,7 +13,7 @@ function launchIframe(contentURL) {
     closeButton.style.top = '10px';
     closeButton.style.left = '10px';
     closeButton.style.zIndex = '1000000';
-
+    
     var fullscreenButton = document.createElement('button');
     fullscreenButton.innerText = 'Fullscreen';
     fullscreenButton.style.position = 'fixed';
@@ -49,7 +50,6 @@ function launchIframe(contentURL) {
         document.body.removeChild(fullscreenButton);
         document.body.removeChild(cloakButton);
         document.body.removeChild(reloadButton);
-        textRotate();
     });
 
 
@@ -83,4 +83,17 @@ function launchIframe(contentURL) {
             iframe.src = iframe.src;
         }
     });
+checkGameLoad_GTAG();
 }
+
+function checkGameLoad_GTAG() {
+console.log('GamesLoadedRan')
+  gtag('event', 'GamesLoaded', {
+    'event_category': 'Game Events',
+    'event_label': 'Games Loaded Function',
+    'value': 1
+  });
+}
+
+
+

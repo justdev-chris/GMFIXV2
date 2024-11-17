@@ -1,5 +1,5 @@
 const originalTitle = document.querySelector('title').textContent;
-const addition = ' - ' + window.location.hostname;
+const addition = ' - geometry-games.online';
 
 // Check if the addition is already in the title
 if (!originalTitle.includes(addition)) {

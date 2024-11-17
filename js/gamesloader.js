@@ -88,12 +88,9 @@ checkGameLoad_GTAG();
 
 function checkGameLoad_GTAG() {
 console.log('GamesLoadedRan')
-  gtag('event', 'GamesLoaded', {
-    'event_category': 'Game Events',
-    'event_label': 'Games Loaded Function',
-    'value': 1
-  });
+        gtag('event', 'gamesLoaded', {
+        'screen_name': '/games.html'
+      });
 }
-
 
 

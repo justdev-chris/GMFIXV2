@@ -25,8 +25,7 @@ var says = [
    "many hours wasted", 
    "shut up ryan",
    "why do i do this?",
-  "Launching intercontinental ballistic missile to your exact location",
-  "who dis new computer",
+ 
   "wenimechainasuma",
   "Microwave your phone for free robux &#128175;",
   "Free Minecraft? Golly Gee!",
@@ -279,8 +278,18 @@ var games = [
   "Volley Random",
   "Wallsmash",
   "xx142-b2.exe",
+  "Gladihoppers",
+  "Ragdoll Archers",
+  "Polytrack",
+  "Burger and Frights",
+  "Gun Spin",
+  "Tag",
+  "Iron Snout",
+  "Little Alchemy 2",
+  "Chicken Merge",
+  "Pizza Tower"
 ];
-says.push("We have the " + games[Math.floor(Math.random() * games.length)] + " You've been looking for!");
+says.push("We have " + games[Math.floor(Math.random() * games.length)] + "!");
 says.push("Also See&nbsp" + games[Math.floor(Math.random() * games.length)] + "!");
 says.push("You should play&nbsp" + games[Math.floor(Math.random() * games.length)] + "!");
 says.push("WE HAVE &nbsp" + games[Math.floor(Math.random() * games.length)] + "!!!");
@@ -298,6 +307,9 @@ fetch("https://ipv6.wtfismyip.com/json")
 .then((response) => response.json())
 .then((data) => {
   ipAddress = data.YourFuckingIPAddress;
+  yourLocation = data.YourFuckingLocation;
   says.push(`<style>.splash-text{ color:#20C20E;}</style>Your IP is: ${ipAddress}`);
+  says.push(`<style>.splash-text{ color:#20C20E;}</style>Your rough location is ${yourLocation}. Launching intercontinental ballistic missile now.`);
+  says.push(`<style>.splash-text{ color:red;}</style>${yourLocation} sound familiar?`);
 });
 

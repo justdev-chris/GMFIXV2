@@ -219,11 +219,12 @@ h4 {
   padding-bottom: 6px;
 }
 #modebutton{
-      position: fixed;
-      top: 10px;
-      right: 10px;
-       z-index: 1000000;
-    }
+  position: fixed;
+  top: 10px;
+  right: 10px;
+   z-index: 1000000;
+}
+
 #leftFloatAd{
   position: fixed;
       top: 75px;
@@ -255,4 +256,9 @@ h4 {
       width: 240px;
       height: 610px;
       cursor: cell;
+}
+#footer{
+  bottom: 0;
+  padding-top: 160px;
+  align-content: center;
 }

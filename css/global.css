@@ -1,6 +1,7 @@
 body{
    background: var(--background-style);
    cursor: cell;
+   height: 100%;
 }
 #iframeforgames{
   background: black;

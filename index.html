@@ -5,14 +5,18 @@
   <script src="js/title.js"></script>
  
   <script>
+    //cloaker script
     function cloakme() {
-
-
-      var win = window.open();
-
+      if(localStorage.getItem('alertedCloak') == null){
+        alert('This does not show up on blockers like Goguardian or in your history. Enjoy!');
+        localStorage.setItem('alertedCloak', 'true');
+      }
+      var self_self = window.self;
+      var win = window.open('','_blank','width=1600,height=900');
+      if (window.focus) {win.focus()}
       win.document.body.style.margin = '0';
       win.document.body.style.height = '100vh';
-      win.document.title = 'Error 404 (Not Found)!!1';
+      win.document.title = window.location.hostname;
       var iframe = win.document.createElement('iframe');
       iframe.style.border = 'none';
       iframe.style.width = '100%';
@@ -20,7 +24,9 @@
       iframe.style.margin = '0';
       iframe.src = "https://" + window.location.hostname;
       win.document.body.appendChild(iframe);
-    close(window.location.hostname);}
+    close(window.location.hostname);
+    window.location = '//mail.google.com';
+    }
   </script>
    <script onload="checkCloak();"src="js/cloak.js"></script>
 <script src="js/gtag.js" onload="gtagLoad();"></script>

@@ -28,6 +28,24 @@
     window.location = '//mail.google.com';
     }
   </script>
+<script>
+function uv_launch(){
+      var self_self = '/static/';
+      var win = window.open('','_blank','width=1600,height=900');
+      if (window.focus) {win.focus()}
+      win.document.body.style.margin = '0';
+      win.document.body.style.height = '100vh';
+      win.document.title = window.location.hostname;
+      var iframe = win.document.createElement('iframe');
+      iframe.style.border = 'none';
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+      iframe.style.margin = '0';
+      iframe.src = '/static/';
+      win.document.body.appendChild(iframe);
+}
+
+</script>
    <script onload="checkCloak();"src="js/cloak.js"></script>
 <script src="js/gtag.js" onload="gtagLoad();"></script>
 </head>
@@ -113,6 +131,9 @@ if (!cookies) {
             </div>
                <div>
               <a onclick="cloakme()" class="button">Cloak Me!</a>
+            </div>
+               <div>
+              <a onclick="uv_launch()" class="button">Ultraviolet!</a>
             </div>
 
   <div>

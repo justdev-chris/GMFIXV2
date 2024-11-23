@@ -1,6 +1,8 @@
 <script>
-
-
-  alert('Page is either being worked on, or not found. Redirecting now.');
+var path = window.location.pathname;
+if(path.includes('static')){}
+else{
+alert('Page is either being worked on, or not found. Redirecting now.');
   window.location.href = '//' + window.location.hostname;
+}
 </script>

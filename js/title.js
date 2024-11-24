@@ -1,11 +1,11 @@
 const additio_n = window.location.hostname;
 function setTitle() {
   var currentTitle = document.querySelector('title').textContent;
-  if(window.location.pathname === "/"){
+  if(window.location.pathname === "/"|| window.location.pathname === "/index.html"){
     currentTitle = additio_n;
   }
   else{
-    // Remove the leading slash from the pathname
+
     currentTitle = window.location.pathname.substring(1) + ' - ' + additio_n;
   }
   document.querySelector('title').textContent = currentTitle;

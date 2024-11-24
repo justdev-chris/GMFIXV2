@@ -1,6 +1,8 @@
 <script>
 var path = window.location.pathname;
-if(path.includes('static')){}
+if(path.includes('static')){
+  window.location.href = window.location.href;
+}
 else{
 alert('Page is either being worked on, or not found. Redirecting now.');
   window.location.href = '//' + window.location.hostname;

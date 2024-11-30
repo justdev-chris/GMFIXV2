@@ -1,11 +1,6 @@
 <head>
 <script>
 function launchRoblox1() {
-      if(localStorage.getItem('alertedCloak') == null){
-        alert('This does not show up on blockers like Goguardian or in your history. Enjoy!');
-        localStorage.setItem('alertedCloak', 'true');
-      }
-      var self_self = window.self;
       var win = window.open('','_blank','width=1600,height=900');
       if (window.focus) {win.focus()}
       win.document.body.style.margin = '0';

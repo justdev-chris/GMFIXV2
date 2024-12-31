@@ -4,7 +4,7 @@ body{
    height: 100%;
 }
 #iframeforgames{
-  background: black;
+  background: var(--background-style);
   cursor: cell;
 }
 

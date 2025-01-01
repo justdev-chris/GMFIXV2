@@ -8,7 +8,7 @@ function launchIframe(contentURL) {
     if (element !== null) {
 element.src = contentURL;
         localStorage.setItem('cloakurl', element.src);
-
+        element.contentWindow.focus();
         element.scrollIntoView({ 
           behavior: "smooth" 
         }); 
@@ -43,6 +43,7 @@ function launchGame(contentURL){
     frame.style = `background: #000000; max-width: 72vh; min-width: 960px; max-height: 40.5vh; min-height: 540px; border: none;`;
     frame.src = contentURL;
     frame.id = 'gameframe_';
+frame.contentWindow.focus();
     //add frame to div for frame
     frameDiv.appendChild(frame);
     //add div for frame to center
@@ -61,6 +62,7 @@ var fullscreen = document.createElement('button');
     fullscreen.id = "fullscreen__";
     fullscreen.addEventListener('click', function () {
         frame.requestFullscreen();
+frame.contentWindow.focus();
     });
     fullscreen.style = "position: relative; float: right;";
 
@@ -101,6 +103,7 @@ var fullscreen = document.createElement('button');
               iframe.style.height = '100%';
               iframe.style.margin = '0';
               iframe.src = localStorage.getItem('cloakurl');
+iframe.contentWindow.focus();
               win.document.body.appendChild(iframe);
         }
     });

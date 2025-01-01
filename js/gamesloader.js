@@ -8,7 +8,7 @@ function launchIframe(contentURL) {
     if (element !== null) {
 element.src = contentURL;
         localStorage.setItem('cloakurl', element.src);
-        element.contentWindow.focus();
+
         element.scrollIntoView({ 
           behavior: "smooth" 
         }); 
@@ -103,7 +103,6 @@ frame.contentWindow.focus();
               iframe.style.height = '100%';
               iframe.style.margin = '0';
               iframe.src = localStorage.getItem('cloakurl');
-iframe.contentWindow.focus();
               win.document.body.appendChild(iframe);
         }
     });

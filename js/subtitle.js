@@ -287,7 +287,17 @@ var games = [
   "Iron Snout",
   "Little Alchemy 2",
   "Chicken Merge",
-  "Pizza Tower"
+  "Pizza Tower",
+  "Super Star Car",
+  "Drift Riders",
+  "Retro Bowl College",
+  "Pou",
+  "Block Blast",
+  "Apple Knight",
+  "Dreader",
+  "Knife Hit",
+  "We Become What We Behold",
+  "AdVenture Capitalist"
 ];
 says.push("We have " + games[Math.floor(Math.random() * games.length)] + "!");
 says.push("Also See&nbsp" + games[Math.floor(Math.random() * games.length)] + "!");

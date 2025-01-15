@@ -87,23 +87,51 @@ frame.contentWindow.focus();
     cloakButton.id = `cloak__`;
     cloakButton.addEventListener('click', function () {
         cloak();
-        function cloak() {
-            var mainGameFrame = document.getElementById('gameframe_');
-            mainGameFrame.src = localStorage.getItem('cloakurl');
-            mainGameFrame.src = 'paused.html?game=' + localStorage.getItem('cloakurl');
-            var win = window.open('','_blank','width=1600,height=900');
-              if (window.focus) {win.focus()}
-              win.document.body.style.margin = '0';
-              win.document.body.style.height = '100vh';
-              win.document.title = window.location.hostname;
-              var iframe = win.document.createElement('iframe');
-              iframe.style.border = 'none';
-              iframe.style.width = '100%';
-              iframe.style.height = '100%';
-              iframe.style.margin = '0';
-              iframe.src = localStorage.getItem('cloakurl');
-              win.document.body.appendChild(iframe);
-        }
+function cloak() {
+  // Get the game frame element
+  const mainGameFrame = document.getElementById('gameframe_');
+
+  // Store the URL from localStorage
+  const gameUrl = localStorage.getItem('cloakurl');
+
+  // Set the game frame source to the paused HTML page
+  mainGameFrame.src = `paused.html?game=${gameUrl}`;
+
+  // Calculate window position
+  const left = (screen.width - 1366) / 2;
+  const top = (screen.height - 768) / 4;
+
+  // Open a new window
+  const win = window.open('', '_blank', `width=1366,height=768,top=${top},left=${left}`);
+
+  // Focus the new window
+  if (window.focus) {
+    win.focus();
+  }
+
+  // Style the new window's body
+  win.document.body.style.margin = '0';
+  win.document.body.style.height = '100vh';
+  win.document.title = window.location.hostname;
+
+  // Create an iframe element
+  const iframe = win.document.createElement('iframe');
+  iframe.style.border = 'none';
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  iframe.style.margin = '0';
+  iframe.src = gameUrl;
+
+  // Append the iframe to the new window's body
+  win.document.body.appendChild(iframe);
+
+  // Event listener for when the new window closes
+  win.addEventListener('close', () => {
+    // Set the game frame source back to the iframe's source
+    mainGameFrame.src = iframe.src;
+  });
+}
+
     });
     
         var reloadButton = document.createElement('button');

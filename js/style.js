@@ -1,3 +1,10 @@
+window.onload = geoCheck; // Remove the parentheses after geoCheck
+function geoCheck() {
+  if (window.location.hostname === "geometry-tryhard.top") { // Use === for comparison
+    window.location.href = "https://geometry-games.online"; 
+  }
+}
+
 function darkmode(obj) {
     if ($(obj).is(":checked")) {
       localStorage.setItem('style', 'css/style.css');

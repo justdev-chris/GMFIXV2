@@ -2,6 +2,7 @@
 
 
 function launchIframe(contentURL) {
+adsFetchGameframe();
     localStorage.setItem('cloakurl', contentURL);
     let element = document.getElementById('gameframe_')
 
@@ -75,7 +76,7 @@ frame.contentWindow.focus();
     br.innerHTML = `<br><br><br><br><h1>More Games</h1>`;
     
    var moreGames = document.createElement('div');
-    moreGames.innerHTML = localStorage.getItem('gamesHTML');
+    moreGames.innerHTML = localStorage.getItem('gameads');
     br.appendChild(moreGames);
 
 
@@ -230,4 +231,22 @@ const svg_Reload = `<svg fill="#FFFFFF" height="20px" width="20px" version="1.1"
 			c-80.1,42.6-131.1,124.8-132.2,215.3C0.799,252.574,9.199,261.874,20.599,261.874z"/>
 	</g>
 </g>
-</svg>`
+</svg>`;
+function adsFetchGameframe() {
+    fetch('/js/ads.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(data => {
+            localStorage.setItem("gameads", data);
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+    if(window.location.pathname.includes("gameframe.html")){
+        loadFrameGamesPage();
+    }
+};

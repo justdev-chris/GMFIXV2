@@ -6,7 +6,7 @@ function launchIframe(contentURL) {
     let element = document.getElementById('gameframe_')
 
     if (element !== null) {
-element.src = contentURL;
+element.src = "/loader.html?game=" + contentURL;
         localStorage.setItem('cloakurl', element.src);
         element.contentWindow.focus();
         element.scrollIntoView({ 
@@ -41,7 +41,7 @@ function launchGame(contentURL){
     frame.style.width = '100%';
     frame.style.border = 'none';
     frame.style = `background: #000000; max-width: 72vh; min-width: 960px; max-height: 40.5vh; min-height: 540px; border: none;`;
-    frame.src = contentURL;
+    frame.src = "/loader.html?game=" + contentURL;
     frame.id = 'gameframe_';
     //add frame to div for frame
     frameDiv.appendChild(frame);
@@ -120,7 +120,7 @@ function cloak() {
   iframe.style.width = '100%';
   iframe.style.height = '100%';
   iframe.style.margin = '0';
-  iframe.src = gameUrl;
+  iframe.src = "/loader.html?game=" + gameUrl;
 
   // Append the iframe to the new window's body
   win.document.body.appendChild(iframe);

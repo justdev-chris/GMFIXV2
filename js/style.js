@@ -1,9 +1,3 @@
-window.onload = geoCheck; // Remove the parentheses after geoCheck
-function geoCheck() {
-  if (window.location.hostname !== "geometry-games.online") { // Use === for comparison
-    window.location.href = "https://geometry-games.online"; 
-  }
-}
 
 function darkmode(obj) {
     if ($(obj).is(":checked")) {

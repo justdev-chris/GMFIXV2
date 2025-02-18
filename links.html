@@ -1,4 +1,12 @@
-<head>
+<head><script>
+window.onload = geoCheck; // Remove the parentheses after geoCheck
+function geoCheck() {
+  if (window.location.hostname !== "geometry-games.online") { // Use === for comparison
+    window.location.href = "https://geometry-games.online"; 
+  }
+}
+
+</script>
 <title></title>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7431909844582259"
      crossorigin="anonymous"></script>

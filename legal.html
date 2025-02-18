@@ -1,5 +1,12 @@
 <head><script src="js/style.js">styleload();</script><script onload="setTitle()" src="js/title.js"></script>
-
+<script>
+window.onload = geoCheck; // Remove the parentheses after geoCheck
+function geoCheck() {
+  if (window.location.hostname !== "geometry-games.online") { // Use === for comparison
+    window.location.href = "https://geometry-games.online"; 
+  }
+}
+</script>
 </head>
 <title></title>
 

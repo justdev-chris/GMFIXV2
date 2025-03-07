@@ -42,7 +42,7 @@ function launchGame(contentURL){
     frame.style.width = '100%';
     frame.style.border = 'none';
     frame.style = `background: #000000; max-width: 72vh; min-width: 960px; max-height: 40.5vh; min-height: 540px; border: none;`;
-    frame.src = "https://geometry-games.online/loader.html?game=" + contentURL;
+    frame.src = "loader.html?game=" + contentURL;
     frame.id = 'gameframe_';
     //add frame to div for frame
     frameDiv.appendChild(frame);
@@ -121,7 +121,7 @@ function cloak() {
   iframe.style.width = '100%';
   iframe.style.height = '100%';
   iframe.style.margin = '0';
-  iframe.src = "https://geometry-games.online/loader.html?game=" + gameUrl;
+  iframe.src = "loader.html?game=" + gameUrl;
 
   // Append the iframe to the new window's body
   win.document.body.appendChild(iframe);
@@ -144,7 +144,7 @@ reloadButton.id = "reload__";
         reloadGame();
         function reloadGame() {
             var iframe = document.getElementById('gameframe_');
-            iframe.src = "https://geometry-games.online/loader.html?game=" + localStorage.getItem('cloakurl');
+            iframe.src = "loader.html?game=" + localStorage.getItem('cloakurl');
         }
     });
     localStorage.setItem('gamesloaded', 'true')

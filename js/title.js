@@ -16,7 +16,7 @@ setTitle();
 
 
 function version(){
-var ver_sion = 'v3.38 Crazy Cattle++'
+var ver_sion = 'v3.38 Crazy Cattle + ☺'
 var src = additio_n + ' ' + ver_sion;
 var text = document.createElement('h1');
 text.innerHTML = src;

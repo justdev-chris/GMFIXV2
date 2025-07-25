@@ -16,7 +16,7 @@ setTitle();
 
 
 function version(){
-var ver_sion = 'v3.38 Crazy Cattle + ☺ (chris was here)'
+var ver_sion = 'v.3.38 (chris was here)'
 var src = additio_n + ' ' + ver_sion;
 var text = document.createElement('h1');
 text.innerHTML = src;

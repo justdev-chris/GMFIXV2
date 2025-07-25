@@ -5,8 +5,7 @@ function launchIframe(contentURL) {
 adsFetchGameframe();
     localStorage.setItem('cloakurl', contentURL);
     let element = document.getElementById('gameframe_')
-
-    if (element !== null) {
+        if (element !== null) {
 element.src = "/loader.html?game=" + contentURL;
         localStorage.setItem('cloakurl', element.src);
         element.contentWindow.focus();

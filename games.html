@@ -1012,14 +1012,14 @@
 <div id="gameFrameContainer"></div>
 
 <script>
-  function launchiframe(path) {
+  function launchIframe(path) {
     document.getElementById("gameFrameContainer").innerHTML = `
       <button onclick="closeiframe()">Close</button>
       <iframe src="${path}" width="960" height="600" style="border:none;" allowfullscreen></iframe>
     `;
   }
 
-  function closeiframe() {
+  function closeIframe() {
     document.getElementById("gameFrameContainer").innerHTML = '';
   }
 </script>

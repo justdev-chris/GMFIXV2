@@ -1,5 +1,87 @@
-<div><p>note: when u click a game name scroll to the very bottom for the game</p></div>
-<div style="max-width: 2400px;" class="games" id="divForGames"><span class="gameframe" onclick="launchIframe('./assets/motox3m/');">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catdevs Games Portal</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    #gameFrameWrapper {
+      display: none;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    #gameFrame {
+      width: 90%;
+      height: 600px;
+      border: none;
+    }
+
+    #closeButton {
+      margin-bottom: 10px;
+      padding: 5px 10px;
+      font-size: 14px;
+      background-color: #ff5f5f;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .games {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .games button {
+      background-color: #222;
+      border: 1px solid #444;
+      border-radius: 8px;
+      padding: 10px;
+      cursor: pointer;
+      color: #fff;
+      width: 120px;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .games button:hover {
+      background-color: #333;
+      transform: scale(1.05);
+    }
+
+    .games img {
+      width: 100px;
+      height: auto;
+      display: block;
+      margin: 0 auto 5px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align: center; margin-top: 20px;">🎮 Catdevs Game Portal</h1>
+
+  <!-- fixed iframe thing so it aint at the bottom lol -->
+  <div id="gameFrameWrapper">
+    <button id="closeButton" onclick="closeIframe()">Close</button>
+    <iframe id="gameFrame"></iframe>
+  </div>
+
+  <!-- the game buttons should be fixed -->
+  <div style="max-width: 2400px;" class="games" id="divForGames">
+<span class="gameframe" onclick="launchIframe('./assets/motox3m/');">
   <img class="gameframe" onclick="localStorage.setItem('gameimage', this.src);" src="img/mx3m-1.jpg" onerror="this.src='./globe.svg'">
   <h1 class="rotating-text" style="margin-bottom: 4px;">Moto X3M</h1><br>
 </span>
@@ -1008,19 +1090,28 @@
   <img class="gameframe" onclick="localStorage.setItem('gameimage', this.src);" src="img/crazycattle3d.png" onerror="this.src='./globe.svg'">
   <h1 class="rotating-text" style="margin-bottom: 4px;">Crazy Cattle 3d</h1><br>
 </span>
-</div>
+  </div>
+  <script>
+    function launchIframe(gamePath) {
+      const wrapper = document.getElementById("gameFrameWrapper");
+      const frame = document.getElementById("gameFrame");
 
-<div id="gameFrameContainer"></div>
+      frame.src = gamePath;
+      wrapper.style.display = "block";
 
-<script>
-  function launchIframe(path) {
-    document.getElementById("gameFrameContainer").innerHTML = `
-      <button onclick="closeiframe()">Close</button>
-      <iframe src="${path}" width="960" height="600" style="border:none;" allowfullscreen></iframe>
-    `;
-  }
+      // iframe smooth
+      wrapper.scrollIntoView({ behavior: "smooth" });
+    }
 
-  function closeIframe() {
-    document.getElementById("gameFrameContainer").innerHTML = '';
-  }
-</script>
+    function closeIframe() {
+      const wrapper = document.getElementById("gameFrameWrapper");
+      const frame = document.getElementById("gameFrame");
+
+      frame.src = "";
+      wrapper.style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
+  

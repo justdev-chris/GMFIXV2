@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>catdevs games</title>
+  <title>catsdevs.online games</title>
   <style>
     body {
       font-family: sans-serif;
@@ -11,6 +11,24 @@
       color: #fff;
       margin: 0;
       padding: 0;
+    }
+
+    nav {
+      background-color: #222;
+      padding: 12px 20px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     #gameFrameWrapper {
@@ -25,14 +43,18 @@
       border: none;
     }
 
-    #closeButton {
-      margin-bottom: 10px;
-      padding: 5px 10px;
+    #closeButton, #fullscreenButton {
+      margin: 5px 6px;
+      padding: 6px 12px;
       font-size: 14px;
       background-color: #ff5f5f;
       border: none;
       color: white;
       cursor: pointer;
+    }
+
+    #fullscreenButton {
+      background-color: #5fafff;
     }
 
     .games {
@@ -41,6 +63,8 @@
       justify-content: center;
       gap: 15px;
       padding: 20px;
+      max-width: 2400px;
+      margin: 0 auto;
     }
 
     .games button {
@@ -53,6 +77,9 @@
       width: 120px;
       text-align: center;
       transition: 0.2s;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
 
     .games button:hover {
@@ -71,15 +98,26 @@
 </head>
 <body>
 
-  <h1 style="text-align: center; margin-top: 20px;">🎮 Catdevs Game Portal</h1>
+  <!-- nav go brr -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="games.html">Games</a>
+    <a href="https://forms.gle/mKppSkxZPTiWPz1U7">Request a Game</a>
+    <a href="legal.html">Legal</a>
+    <a href="dmca.html">DMCA</a>
+  </nav>
 
-  <!-- fixed iframe thing so it aint at the bottom lol -->
+  <h1 style="text-align: center; margin-top: 20px;"> catsdevs.online games </h1>
+
+  <!-- fix frame and add fullscreen -->
   <div id="gameFrameWrapper">
     <button id="closeButton" onclick="closeIframe()">Close</button>
+    <button id="fullscreenButton" onclick="toggleFullscreen()">Fullscreen</button>
+    <br>
     <iframe id="gameFrame"></iframe>
   </div>
 
-  <!-- the game buttons should be fixed -->
+  <!-- lil grid -->
   <div style="max-width: 2400px;" class="games" id="divForGames">
 <span class="gameframe" onclick="launchIframe('./assets/motox3m/');">
   <img class="gameframe" onclick="localStorage.setItem('gameimage', this.src);" src="img/mx3m-1.jpg" onerror="this.src='./globe.svg'">
@@ -1098,8 +1136,6 @@
 
       frame.src = gamePath;
       wrapper.style.display = "block";
-
-      // iframe smooth
       wrapper.scrollIntoView({ behavior: "smooth" });
     }
 
@@ -1110,8 +1146,18 @@
       frame.src = "";
       wrapper.style.display = "none";
     }
+
+    function toggleFullscreen() {
+      const iframe = document.getElementById("gameFrame");
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+      } else if (iframe.webkitRequestFullscreen) {
+        iframe.webkitRequestFullscreen();
+      } else if (iframe.msRequestFullscreen) {
+        iframe.msRequestFullscreen();
+      }
+    }
   </script>
 
 </body>
 </html>
-  

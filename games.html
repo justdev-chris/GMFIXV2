@@ -1128,6 +1128,11 @@
   <img class="gameframe" onclick="localStorage.setItem('gameimage', this.src);" src="img/crazycattle3d.png" onerror="this.src='./globe.svg'">
   <h1 class="rotating-text" style="margin-bottom: 4px;">Crazy Cattle 3d</h1><br>
 </span>
+  <span class="gameframe" onclick="launchIframe('https://catsdevs.online/Ultimate-Cat-Clicker/UCC/'); localStorage.setItem('gameTitle_', this.getElementsByClassName(`rotating-text`)[0].textContent); console.log(localStorage.getItem('gameTitle_'))">
+
+  <img class="gameframe" onclick="localStorage.setItem('gameimage', this.src);" src="https://raw.githubusercontent.com/justdev-chris/P2E/refs/heads/main/app.ico" onerror="this.src='./globe.svg'"> 
+  <h1 class="rotating-text" style="margin-bottom: 4px;">Ultimate Cat Clicker</h1><br>
+  </span>
   </div>
   <script>
     function launchIframe(gamePath) {
